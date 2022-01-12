@@ -1,15 +1,19 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { useState } from "react";
+import { StyleSheet, Text, View, TextInput } from "react-native";
 
 export default function App(props) {
+  const [startAmount, setStartAmount] = useState(0);
+
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
-        React Native for Web & Next.js
+        Wiki Unit
       </Text>
 
-      <Text style={styles.link} accessibilityRole="link" href={`/alternate`}>
-        A universal link
-      </Text>
+      <TextInput
+        value={startAmount.toString()}
+        onChangeText={(newAmount) => setStartAmount(Number(newAmount))}
+      />
 
       <View style={styles.textContainer}>
         <Text accessibilityRole="header" aria-level="2" style={styles.text}>
@@ -17,25 +21,25 @@ export default function App(props) {
         </Text>
       </View>
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: 'center',
+    alignItems: "center",
     flexGrow: 1,
-    justifyContent: 'center',
+    justifyContent: "center",
   },
   link: {
-    color: 'blue',
+    color: "blue",
   },
   textContainer: {
-    alignItems: 'center',
+    alignItems: "center",
     marginTop: 16,
   },
   text: {
-    alignItems: 'center',
+    alignItems: "center",
     fontSize: 24,
     marginBottom: 24,
   },
-})
+});

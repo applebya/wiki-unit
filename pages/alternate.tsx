@@ -6,10 +6,6 @@ export default function Alternate() {
       <Text accessibilityRole="header" style={styles.text}>
         Alternate Page
       </Text>
-
-      <Text style={styles.link} accessibilityRole="link" href={`/`}>
-        Go Back
-      </Text>
     </View>
   )
 }

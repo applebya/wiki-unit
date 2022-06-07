@@ -74,9 +74,6 @@ export default function App(props) {
 }
 
 const styles = StyleSheet.create({
-  link: {
-    color: "blue",
-  },
   textContainer: {
     alignItems: "center",
     marginTop: 16,
